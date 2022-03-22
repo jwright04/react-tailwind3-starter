@@ -1,0 +1,9 @@
+.app {
+    &__notification {
+        @apply bg-gray-600;
+        @apply text-white;
+        @apply py-3;
+        @apply flex;
+        @apply justify-center;
+    }
+}

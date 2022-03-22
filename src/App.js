@@ -1,9 +1,14 @@
 import logo from './logo.svg';
+import './App.scss';
 
-function App() {
+const App = () => {
   return (
-    <div className="text-center">
-      <header className="flex flex-col items-center justify-center min-h-screen font-sans bg-secondary">
+    <div className='app'>
+      <div className="app__notification">
+        This is just a test
+      </div>
+      <div className="text-center">
+        <header className="flex flex-col items-center justify-center min-h-screen font-sans bg-secondary">
         <img
           src={logo}
           style={{ height: '40vmin' }}
@@ -36,6 +41,7 @@ function App() {
           </a>
         </div>
       </header>
+    </div>
     </div>
   );
 }
