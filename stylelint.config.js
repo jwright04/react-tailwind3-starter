@@ -5,5 +5,17 @@ module.exports = {
   rules: {
     'declaration-no-important': true,
     'color-hex-case': 'upper',
+    'at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules,
+      },
+    ],
+    'scss/at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules,
+      },
+    ],
   },
 };
