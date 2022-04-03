@@ -27,9 +27,11 @@
     "format": "prettier --write src/**/*.ts{,x}",
     "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
     "lint:scss": "stylelint src/**/*.scss",
+    "lint:css": "stylelint src/**/*.css",
     "clean": "rm -rf node_modules && rm package-lock.json && npm i",
     "clean:start": "npm run clean && npm start",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
   },
   "eslintConfig": {
     "extends": [
@@ -62,9 +64,18 @@
     "prettier-plugin-tailwindcss": "^0.1.8",
     "stylelint": "^14.6.0",
     "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-prettier-scss": "0.0.1",
     "stylelint-config-sass-guidelines": "^9.0.1",
     "stylelint-config-standard": "^25.0.0",
+    "stylelint-config-standard-scss": "^3.0.0",
     "tailwindcss": "^3.0.23",
     "tailwindcss-plugins": "^0.3.0"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,css,scss}": [
+      "npm run lint",
+      "npm run format",
+      "npm run test -- --watchAll=false --findRelatedTests --bail"
+    ]
   }
 }

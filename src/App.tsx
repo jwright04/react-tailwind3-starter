@@ -13,7 +13,7 @@ const App = () => {
           </p>
           <div className='mt-2 flex items-center space-x-8'>
             <a className='cursor-pointer text-primary' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-              Learn ReactJS
+              Learn React
             </a>
             <a className='cursor-pointer text-primary' href='https://tailwindcss.com' target='_blank' rel='noopener noreferrer'>
               Learn Tailwind CSS
